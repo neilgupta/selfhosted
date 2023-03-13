@@ -47,7 +47,7 @@ services:
       - geoip
     environment:
       - GEOLITE2_COUNTRY_DB=/geoip/GeoLite2-Country.mmdb
-      - BASE_URL=http://home.neil.gg:2022
+      - BASE_URL=https://plausible.metamorphium.com
       - DISABLE_REGISTRATION=true
     volumes:
       - geoip:/geoip:ro
