@@ -21,11 +21,8 @@ services:
     volumes:
       - data:/usr/src/paperless/data
       - media:/usr/src/paperless/media
-      - /Users/neil/Library/Mobile\ Documents/com\~apple\~CloudDocs/Documents/paperless-export:/usr/src/paperless/export
-      - /Users/neil/Library/Mobile\ Documents/com\~apple\~CloudDocs/Paperless:/usr/src/paperless/consume
     environment:
       - PAPERLESS_REDIS=redis://broker:6379
-      - PAPERLESS_URL=http://home.neil.gg:2021
       - PAPERLESS_TIME_ZONE=America/Chicago
       # Set if accessing paperless via a domain subpath e.g. https://domain.com/PATHPREFIX and using a reverse-proxy like traefik or nginx
       # - PAPERLESS_FORCE_SCRIPT_NAME=/PATHPREFIX

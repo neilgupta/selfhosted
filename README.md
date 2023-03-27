@@ -7,6 +7,7 @@ These are services I self-host on my local network.
 * [mealie](https://mealie.io) - recipe tracker
 * [paperless](https://docs.paperless-ngx.com) - document manager
 * [uptime-kuma](https://github.com/louislam/uptime-kuma) - health monitor for my other services
+* [plausible](https://plausible.io) - web analytics
 
 ## Backup
 
