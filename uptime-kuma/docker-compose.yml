@@ -10,6 +10,17 @@ services:
     volumes:
       - uptime-kuma:/app/data
 
+  backup:
+    image: offen/docker-volume-backup:latest
+    restart: always
+    env_file:
+      - ../backup.env
+    environment:
+      - AWS_S3_PATH=uptime_kuma
+    volumes:
+      - uptime-kuma:/backup/uptime-kuma:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
 volumes:
   uptime-kuma:
     driver: local

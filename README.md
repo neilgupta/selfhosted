@@ -4,14 +4,14 @@ These are services I self-host on my local network.
 
 ## Services
 
-* [mealie](https://mealie.io) - recipe tracker
+* ~~[mealie](https://mealie.io) - recipe tracker~~
 * [paperless](https://docs.paperless-ngx.com) - document manager
 * [uptime-kuma](https://github.com/louislam/uptime-kuma) - health monitor for my other services
-* [plausible](https://plausible.io) - web analytics
+* ~~[plausible](https://plausible.io) - web analytics~~
 
 ## Backup
 
-TODO: setup automatic volume backup with [docker-volume-backup](https://github.com/offen/docker-volume-backup#recurring-backups-in-a-compose-setup)
+Automatic backups are handled with [docker-volume-backup](https://github.com/offen/docker-volume-backup#recurring-backups-in-a-compose-setup)
 
 ## Notes to self
 
@@ -19,4 +19,11 @@ To copy data from one volume to another, use the following command:
 
 ```bash
 docker run --rm -it -v uptime-kuma:/from -v uptime-kuma_uptime-kuma:/to alpine ash -c "cd /from ; cp -av . /to"
+```
+
+To update an image, we must first delete the local image or hard-code the image version:
+
+```bash
+docker-compose down -rmi all
+docker-compose up -d
 ```

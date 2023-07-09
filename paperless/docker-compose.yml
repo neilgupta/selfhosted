@@ -21,12 +21,26 @@ services:
     volumes:
       - data:/usr/src/paperless/data
       - media:/usr/src/paperless/media
+    labels:
+      - docker-volume-backup.stop-during-backup=true
     environment:
       - PAPERLESS_REDIS=redis://broker:6379
       - PAPERLESS_TIME_ZONE=America/Chicago
       # Set if accessing paperless via a domain subpath e.g. https://domain.com/PATHPREFIX and using a reverse-proxy like traefik or nginx
       # - PAPERLESS_FORCE_SCRIPT_NAME=/PATHPREFIX
       # - PAPERLESS_STATIC_URL=/PATHPREFIX/static/ # trailing slash required
+
+  backup:
+    image: offen/docker-volume-backup:latest
+    restart: always
+    env_file:
+      - ../backup.env
+    environment:
+      - AWS_S3_PATH=paperless
+    volumes:
+      - data:/backup/data:ro
+      - media:/backup/media:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
 
 volumes:
   data:
