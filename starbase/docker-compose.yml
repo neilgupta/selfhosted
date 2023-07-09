@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    homepage:
+        image: jordanroher/starbase-80
+        ports:
+            - 4173:4173
+        environment:
+            - TITLE=Neil Gupta
+            - LOGO=logo.png
+            - HEADER=true # defaults to true, set to false to hide the title and logo
+            - HEADERLINE=true # defaults to true, set to false to turn off the header border line
+            - NEWWINDOW=true # defaults to true, set to false to not have links open in a new window
+        volumes:
+            - ./config.json:/app/src/config.json
+            - ./logo.png:/app/public/logo.png

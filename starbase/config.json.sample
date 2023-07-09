@@ -1,0 +1,19 @@
+[
+  {
+    "category": "Apps",
+    "services": [
+      {
+        "name": "Paperless",
+        "uri": "http://paperless.neil.gg/documents",
+        "description": "Documents",
+        "icon": "paperless-ngx"
+      },
+      {
+        "name": "Uptime-Kuma",
+        "uri": "http://uptime.neil.gg",
+        "description": "Health monitor",
+        "icon": "uptime-kuma"
+      },
+    ]
+  }
+]

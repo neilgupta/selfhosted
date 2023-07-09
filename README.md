@@ -4,10 +4,10 @@ These are services I self-host on my local network.
 
 ## Services
 
-* ~~[mealie](https://mealie.io) - recipe tracker~~
 * [paperless](https://docs.paperless-ngx.com) - document manager
 * [uptime-kuma](https://github.com/louislam/uptime-kuma) - health monitor for my other services
-* ~~[plausible](https://plausible.io) - web analytics~~
+* [Nginx Proxy Manager](https://nginxproxymanager.com) - proxy hosts to different services
+* [Starbase 80](https://github.com/notclickable-jordan/starbase-80) - a nice dashboard
 
 ## Backup
 
