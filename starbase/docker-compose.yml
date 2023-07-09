@@ -10,7 +10,7 @@ services:
             - LOGO=logo.png
             - HEADER=true # defaults to true, set to false to hide the title and logo
             - HEADERLINE=true # defaults to true, set to false to turn off the header border line
-            - NEWWINDOW=true # defaults to true, set to false to not have links open in a new window
+            - NEWWINDOW=false # defaults to true, set to false to not have links open in a new window
         volumes:
             - ./config.json:/app/src/config.json
             - ./logo.png:/app/public/logo.png

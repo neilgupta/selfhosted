@@ -27,3 +27,9 @@ To update an image, we must first delete the local image or hard-code the image 
 docker-compose down -rmi all
 docker-compose up -d
 ```
+
+To load TS script:
+
+```bash
+launchctl load gg.neil.ts.plist
+```
