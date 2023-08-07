@@ -37,6 +37,9 @@ services:
       - ../backup.env
     environment:
       - AWS_S3_PATH=paperless
+      - BACKUP_FILENAME=paperless-%Y-%m-%dT%H-%M-%S.tar.gz
+      - BACKUP_PRUNING_PREFIX=paperless-
+      - BACKUP_RETENTION_DAYS=7
     volumes:
       - data:/backup/data:ro
       - media:/backup/media:ro

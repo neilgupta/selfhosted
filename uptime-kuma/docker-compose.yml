@@ -17,6 +17,9 @@ services:
       - ../backup.env
     environment:
       - AWS_S3_PATH=uptime_kuma
+      - BACKUP_FILENAME=uptime-%Y-%m-%dT%H-%M-%S.tar.gz
+      - BACKUP_PRUNING_PREFIX=uptime-
+      - BACKUP_RETENTION_DAYS=7
     volumes:
       - uptime-kuma:/backup/uptime-kuma:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
