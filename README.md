@@ -31,5 +31,9 @@ docker-compose up -d
 To load TS script:
 
 ```bash
-launchctl load gg.neil.ts.plist
+cp gg.neil.ts.plist ~/Library/LaunchAgents/gg.neil.ts.plist
+launchctl load ~/Library/LaunchAgents/gg.neil.ts.plist
+launchctl list | grep gg.neil
 ```
+
+The last command confirms it is correctly loaded and running
