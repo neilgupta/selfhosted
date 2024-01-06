@@ -8,6 +8,7 @@ These are services I self-host on my local network.
 * [uptime-kuma](https://github.com/louislam/uptime-kuma) - health monitor for my other services
 * [Nginx Proxy Manager](https://nginxproxymanager.com) - proxy hosts to different services
 * [Starbase 80](https://github.com/notclickable-jordan/starbase-80) - a nice dashboard
+* [Whisper ASR](https://github.com/ahmetoner/whisper-asr-webservice/) - API server to access Whisper model
 
 ## Backup
 
