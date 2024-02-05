@@ -9,6 +9,7 @@ These are services I self-host on my local network.
 * [Nginx Proxy Manager](https://nginxproxymanager.com) - proxy hosts to different services
 * [Starbase 80](https://github.com/notclickable-jordan/starbase-80) - a nice dashboard
 * [Whisper ASR](https://github.com/ahmetoner/whisper-asr-webservice/) - API server to access Whisper model
+* [Ollama](https://ollama.ai) - API server to access open-source LLM models
 
 ## Backup
 
@@ -38,3 +39,20 @@ launchctl list | grep gg.neil
 ```
 
 The last command confirms it is correctly loaded and running
+
+### Ollama setup
+
+After downloading Ollama, download your preferred model (currently I use mistral with my 8gb of VRAM):
+
+```bash
+ollama pull mistral
+```
+
+Also configure remote access to the server:
+
+```bash
+launchctl setenv OLLAMA_HOST "0.0.0.0"
+launchctl setenv OLLAMA_ORIGINS "*"
+```
+
+This is safe to do only because my server is not public-facing, limited to my private network.
