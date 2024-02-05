@@ -48,11 +48,11 @@ After downloading Ollama, download your preferred model (currently I use mistral
 ollama pull mistral
 ```
 
-Also configure remote access to the server:
+Also configure remote access to the server (safe to do only because my machine is not public-facing):
 
 ```bash
 launchctl setenv OLLAMA_HOST "0.0.0.0"
 launchctl setenv OLLAMA_ORIGINS "*"
 ```
 
-This is safe to do only because my server is not public-facing, limited to my private network.
+Then restart ollama.
